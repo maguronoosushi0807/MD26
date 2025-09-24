@@ -4,47 +4,55 @@
 
 ## 基本計算
 - 文字式と同様に方程式を解く
+
 - 単位ベクトル → 大きさで割る
 - 文字に別の多項式を代入
+- $ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} $
 
-## ベクトルを求める
-- 一次独立 $( \vec{a} \not\parallel \vec{b},　\vec{a} \neq \vec{0},　 \vec{b} \neq \vec{0} )$ → $\vec{p} = s\vec{a} + t\vec{b}$ となるs,tはただ一通りある。
-- $ AP:PB = t:1-t $ → $ \vec{a} = (1-t)\vec{a} + t\vec{b} $
-- 位置ベクトル → 点を表す文字が減るよう、基点を慎重に考える
+## 位置ベクトルを求める
+### 位置ベクトルの考え方
+- 基点の置き方 → 各点 $A, B, C, ...$ を表すのに必要な文字が減る点にする
   - 基本 → 原点, 点A
-  - $ \vec{AP}+\vec{BP}, \vec{AP}\cdot\vec{BP} $ など → ABの中点M
-- 分点の公式
-- $ \vec{AB} = \vec{OB} - \vec{OA} $
-- ～の位置 → (左辺)と(右辺)を、同じ基点の位置ベクトル表す
-- ～の軌跡 → 基本は位置と同じ考え方、$t, k$など変数は多項式から分離する
+  - $ \overrightarrow{AP}+\overrightarrow{BP}, 　\overrightarrow{AP}\cdot\overrightarrow{BP} $ など → $AB$ の中点 $M$
+- ～の位置 → (左辺) と (右辺)を、同じ基点の位置ベクトル表す
+- ～の軌跡 → 基本は位置と同じ考え方、$t, k$ などの変数は多項式から分離する
+
+### 位置ベクトルを求める
 - 交点の位置ベクトル
-  - $ AR:RP = s:(1-s) \\ BR:RQ = t:(1-t) $ とおき、$ \alpha\vec{OA} + \beta\vec{OB}$ の形で表し一次独立から係数の比較を行う
-  - 一直線上 → $ \vec{OB} = k\vec{OB} $
+  - $ AR:RP = s:(1-s) , BR:RQ = t:(1-t) \\ $ とおき、これら2つから分点の式を作って $ \alpha\overrightarrow{OA} + \beta\overrightarrow{OB}$ の形で表し一次独立から係数の比較を行う
   - 比でおき、2つ式を作って係数比較
+  - 一直線上 → $ \overrightarrow{OB} = k\overrightarrow{OB} $
   - 一直線上より $ \vec{OP} = k{OA} $ とおき、係数の特徴から文字を消す
-- 係数比較 → 一次独立が条件
-- $\vec{a}と\vec{b}$を用いて表せ(一次独立) → $\vec{p} = s\vec{a} + t\vec{b}$ (答えの形から考える)
+- $ AP:PB = t:1-t $ に内分する点 → $ \vec{a} = (1-t)\vec{a} + t\vec{b} $
 - 線分AB上 → $\vec{p} = s\vec{a}+t\vec{b}　(s+t=1)$
-- ベクトルの分解
-- 平行
+- 分点の公式
+
+### 一次独立の利用 $( \vec{a} \not\parallel \vec{b},　\vec{a} \neq \vec{0},　 \vec{b} \neq \vec{0} )$
+- $\vec{a}, \vec{b}$ が一次独立 → $\vec{p} = s\vec{a} + t\vec{b}$ となる $s,t$ はただ一通りある。
+- $\vec{a}と\vec{b}$を用いて表せ → $\vec{p} = s\vec{a} + t\vec{b}$ (答えの形から考える)
+- 係数比較 → 一次独立であるか確認
+
+## 量を求める
+### 大きさ $|\vec{a}|$
+- 基本 → 2乗する
+- 条件が与えられている → 与えられたベクトルをそのまま文字で置き、その文字で求めたいベクトルを表してから2乗する
+
+### 平行
+- $\vec{a}, \vec{b}$ が平行
   - $\vec{b} = k\vec{a}$ となる $k$ が存在
   - $ a_1:b_1 = a_2:b_2 $
   - $ a_1 b_2 = a_2 b_1 $
 
-## 量を求める
-### 大きさ$|\overrightarrow{OA}|$
-- 基本 → 2乗する
-- 条件が与えられている → 与えられたベクトルをそのまま文字で置き、その文字で求めたいベクトルを表してから2乗する
-
-### 内積
+### 内積 $\vec{a} \cdot \vec{b}$
 - 内積
   - $ \vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| cos\theta $
   - $ \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 $
 - $ |\vec{a}-\vec{b}| $ → 2乗して内積を取り出す
 - 内積の最大・最小 → $ cos\theta, |\vec{a}|, |\vec{b}|$ の最大・最小
 - なす角 $ cos\theta = \frac{ \vec{a} \cdot \vec{b} }{|\vec{a}| |\vec{b}|} $
+- $\vec{a}, \vec{b}$ が垂直 → $ \vec{a} \cdot \vec{b} = 0 $
 
-### 面積
+### 面積 $S$
 - $\triangle{OAB}$ の面積S
   - $ S = \frac{1}{2} \sqrt{ |\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2} $
   - $ S = \frac{1}{2} | a_1b_2 - a_2b_1| $
@@ -52,8 +60,8 @@
 - 高さが変わらない → 面積一定
 
 ### 三角形でのベクトルの扱い
-- 三角形 → $ \vec{AB} + \vec{BC} + \vec{CA} = \vec{0}$
-- 重心 → $ \vec{OG} = \frac{1}{3}(\vec{OA}+\vec{OB}+\vec{OC}) $
+- 三角形 → $ \overrightarrow{AB} + \overrightarrow{BC} + \overrightarrow{CA} = \overrightarrow{0}$
+- 重心 → $ \overrightarrow{OG} = \frac{1}{3}(\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}) $
 - 内接円 → 各頂点から接点までの距離を文字でおく 
 - 内心 → 辺の比から図形の性質
 - 外心が基点の位置ベクトル → $|\vec{a}| = |\vec{b}| = |\vec{c}| = r$
@@ -109,6 +117,7 @@
 
 
 # 空間ベクトル
+- AB上の点をPとすると $\overrightarrow{OP}$ が最小となる → 点Oからの垂線との交点
 
 # 複素数平面
 # 式と曲線
