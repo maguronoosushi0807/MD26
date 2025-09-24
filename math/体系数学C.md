@@ -26,34 +26,33 @@
 - $\vec{a}と\vec{b}$を用いて表せ(一次独立) → $\vec{p} = s\vec{a} + t\vec{b}$ (答えの形から考える)
 - 線分AB上 → $\vec{p} = s\vec{a}+t\vec{b}　(s+t=1)$
 - ベクトルの分解
-
-## 量を求める
-### 大きさ$|\overrightarrow{OA}|$ : 2乗する
-- 大きさの最大・最小 → 2乗
 - 平行
   - $\vec{b} = k\vec{a}$ となる $k$ が存在
   - $ a_1:b_1 = a_2:b_2 $
   - $ a_1 b_2 = a_2 b_1 $
-- 大きさ → 2乗
-- 大きさの最大・最小 → 与えられたベクトルの大きさをそのまま文字で置き、その文字で求めたいベクトルを表してから2乗する
+
+## 量を求める
+### 大きさ$|\overrightarrow{OA}|$
+- 基本 → 2乗する
+- 条件が与えられている → 与えられたベクトルをそのまま文字で置き、その文字で求めたいベクトルを表してから2乗する
 
 ### 内積
 - 内積
   - $ \vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| cos\theta $
   - $ \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 $
-- なす角 $ cos\theta = \frac{ \vec{a} \cdot \vec{b} }{|\vec{a}| |\vec{b}|} $
 - $ |\vec{a}-\vec{b}| $ → 2乗して内積を取り出す
 - 内積の最大・最小 → $ cos\theta, |\vec{a}|, |\vec{b}|$ の最大・最小
+- なす角 $ cos\theta = \frac{ \vec{a} \cdot \vec{b} }{|\vec{a}| |\vec{b}|} $
 
 ### 面積
 - $\triangle{OAB}$ の面積S
-  - $$ S = \frac{1}{2} \sqrt{ |\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2}$$
-  - $$ S = \frac{1}{2} | a_1b_2 - a_2b_1| $$
-- 三角形 → $ \vec{AB} + \vec{BC} + \vec{CA} = \vec{0}$
+  - $ S = \frac{1}{2} \sqrt{ |\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2} $
+  - $ S = \frac{1}{2} | a_1b_2 - a_2b_1| $
 - 面積比 → 一番小さい部分の辺の比を文字で置き、全体へと広げる
 - 高さが変わらない → 面積一定
 
 ### 三角形でのベクトルの扱い
+- 三角形 → $ \vec{AB} + \vec{BC} + \vec{CA} = \vec{0}$
 - 重心 → $ \vec{OG} = \frac{1}{3}(\vec{OA}+\vec{OB}+\vec{OC}) $
 - 内接円 → 各頂点から接点までの距離を文字でおく 
 - 内心 → 辺の比から図形の性質
