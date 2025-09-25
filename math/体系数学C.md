@@ -1,13 +1,29 @@
 # 平面ベクトル
-> 求値: 内積 \
-> 証明: 内積以外
+
+## 目次
+- 基本計算
+- 位置ベクトルを求める
+  - 位置ベクトルの考え方
+  - 一次独立の利用
+  - 位置ベクトルを求める
+- 量を求める
+  - 大きさ
+  - 平行
+  - 内積
+  - 面積
+  - 三角形でのベクトルの扱い
+- ベクトル ↔ 図形と方程式の相互変換
+- 斜行座標(点の動く範囲)
+
 
 ## 基本計算
+> 求値: 内積 \
+> 証明: 内積以外
 - 文字式と同様に方程式を解く
-
 - 単位ベクトル → 大きさで割る
-- 文字に別の多項式を代入
+- ベクトルに別のベクトルの多項式を代入
 - $ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} $
+- $ \overrightarrow{OH} = \overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC}$ のとき、 $ \overrightarrow{OH} - \overrightarrow{OA} = \overrightarrow{OB} + \overrightarrow{OC}$ より、 $ \overrightarrow{AH} = \overrightarrow{OB} + \overrightarrow{OC} $
 
 ## 位置ベクトルを求める
 ### 位置ベクトルの考え方
@@ -17,20 +33,25 @@
 - ～の位置 → (左辺) と (右辺)を、同じ基点の位置ベクトル表す
 - ～の軌跡 → 基本は位置と同じ考え方、$t, k$ などの変数は多項式から分離する
 
-### 位置ベクトルを求める
-- 交点の位置ベクトル
-  - $ AR:RP = s:(1-s) , BR:RQ = t:(1-t) \\ $ とおき、これら2つから分点の式を作って $ \alpha\overrightarrow{OA} + \beta\overrightarrow{OB}$ の形で表し一次独立から係数の比較を行う
-  - 比でおき、2つ式を作って係数比較
-  - 一直線上 → $ \overrightarrow{OB} = k\overrightarrow{OB} $
-  - 一直線上より $ \vec{OP} = k{OA} $ とおき、係数の特徴から文字を消す
-- $ AP:PB = t:1-t $ に内分する点 → $ \vec{a} = (1-t)\vec{a} + t\vec{b} $
-- 線分AB上 → $\vec{p} = s\vec{a}+t\vec{b}　(s+t=1)$
-- 分点の公式
-
 ### 一次独立の利用 $( \vec{a} \not\parallel \vec{b},　\vec{a} \neq \vec{0},　 \vec{b} \neq \vec{0} )$
 - $\vec{a}, \vec{b}$ が一次独立 → $\vec{p} = s\vec{a} + t\vec{b}$ となる $s,t$ はただ一通りある。
 - $\vec{a}と\vec{b}$を用いて表せ → $\vec{p} = s\vec{a} + t\vec{b}$ (答えの形から考える)
 - 係数比較 → 一次独立であるか確認
+
+### 位置ベクトルを求める
+**基本方針: $\vec{p} = s\vec{a} + t\vec{b}$ と表し、係数を決定**
+- 内積を用いて係数の関係式を作る
+  - $\overrightarrow{AM} \cdot \overrightarrow{BC} = 0$
+- 2式の係数を比較する
+  - 交点の位置ベクトル
+  - $ AR:RP = s:(1-s) , BR:RQ = t:(1-t) \\ $ とおき、これら2つから分点の式を作って $ \alpha\overrightarrow{OA} + \beta\overrightarrow{OB}$ の形で表し一次独立から係数の比較を行う
+- 係数の特徴を利用する
+  - 線分AB上 → $\vec{p} = s\vec{a}+t\vec{b}　(s+t=1)$
+  - 一直線上 → $ \overrightarrow{OB} = k\overrightarrow{OB} $
+  - $ AP:PB = t:1-t $ に内分する点 → $ \vec{a} = (1-t)\vec{a} + t\vec{b} $
+  - 分点の公式
+  - 特定の直線上であることを表現するため、目的の形を無理やり作る
+
 
 ## 量を求める
 ### 大きさ $|\vec{a}|$
@@ -54,8 +75,9 @@
 
 ### 面積 $S$
 - $\triangle{OAB}$ の面積S
-  - $ S = \frac{1}{2} \sqrt{ |\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2} $
-  - $ S = \frac{1}{2} | a_1b_2 - a_2b_1| $
+  - $$ S = \frac{1}{2}|a||b|sin\theta $$
+  - $$ S = \frac{1}{2} \sqrt{ |\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2} $$
+  - $$ S = \frac{1}{2} | a_1b_2 - a_2b_1| $$
 - 面積比 → 一番小さい部分の辺の比を文字で置き、全体へと広げる
 - 高さが変わらない → 面積一定
 
@@ -65,26 +87,27 @@
 - 内接円 → 各頂点から接点までの距離を文字でおく 
 - 内心 → 辺の比から図形の性質
 - 外心が基点の位置ベクトル → $|\vec{a}| = |\vec{b}| = |\vec{c}| = r$
+- 三角形の形状 → まずは辺の長さ、次に角度を調べる
 
 ## ベクトル ↔ 図形と方程式の相互変換
-- 
+- 直線とベクトル方程式
   直線 | ベクトル方程式
   -|-
-  2点 $\vec{a}, \vec{b}$ を通る | $\vec{p}=s\vec{a}+t\vec{b}　(s+t=1)$
-  $\vec{a}$ を通り $\vec{d}$ に平行 | $\vec{p} = \vec{a} + t\vec{d}$
-  法線ベクトル $\vec{n}$ に垂直な直線 | $\vec{n} \cdot \vec{AP} = 0$
--
+  2点 $\vec{a}, \vec{b}$ を通る　 | 　$\vec{p}=s\vec{a}+t\vec{b}　(s+t=1)$
+  $\vec{a}$ を通り $\vec{d}$ に平行　 | 　$\vec{p} = \vec{a} + t\vec{d}$
+  法線ベクトル $\vec{n}$ に垂直な直線　 | 　$\vec{n} \cdot \vec{AP} = 0$
+
+- 円人ベクトル方程式
   円 | ベクトル方程式
   -|-
-  2点 $\vec{a}, \vec{b}$ を通る円 | $(\vec{p}-\vec{a})(\vec{p}-\vec{b}) = 0$
-  $ \lvert l\vec{p}-m\vec{a}-n\vec{b} \rvert = 12$ | $\lvert \vec{p}-\frac{m}{l}\vec{a}-\frac{n}{l}\vec{b} \rvert = \frac{12}{l}$ の形に変形
-  
+  2点 $\vec{a}, \vec{b}$ を通る円　 | 　$(\vec{p}-\vec{a})(\vec{p}-\vec{b}) = 0$
+  $ \lvert l\vec{p}-m\vec{a}-n\vec{b} \rvert = 12$　 | 　$\lvert \vec{p}-\frac{m}{l}\vec{a}-\frac{n}{l}\vec{b} \rvert = \frac{12}{l}$ の形に変形
+
 - $ax+by+c = 0$ の法線ベクトル $\vec{n} = (a,b)$
 - x,yの方程式の導出
   - 成分で演算
-  - 求める座標を(x,y)とおき、2通りで表してから式に代入
+- 点から直線へ下ろした垂線との交点 → 求める座標を $(p,q)$ とおき、内積 = 0 から2通りで表してから式に代入
 - 2直線のなす角 → $\vec{n_1}, \vec{n_2}$ のなす角を考える
-- 目的の形を無理やり作る
 - 方向ベクトルを作る
 
 ## 斜行座標(点の動く範囲)
