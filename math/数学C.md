@@ -42,10 +42,10 @@
 ### 位置ベクトルを求める
 **基本方針: $\vec{p} = s\vec{a} + t\vec{b}$ と表し、係数を決定**
 - 手段1: 内積を用いて係数の関係式を作る
-  - $\vec{p} \cdot (\vec{b} - \vec{a}) = 0 \\ (s\vec{a} + t\vec{b}) \cdot (\vec{b} - \vec{a}) = 0 \\ (\vec{a} \cdot \vec{b} - |\vec{a}|^2)s + (|\vec{b}|^2 - \vec{a} \cdot \vec{b}) t = 0$ <br> など
+  - $\vec{p} \cdot (\vec{b} - \vec{a}) = 0 \\\\ (s\vec{a} + t\vec{b}) \cdot (\vec{b} - \vec{a}) = 0 \\\\ (\vec{a} \cdot \vec{b} - |\vec{a}|^2)s + (|\vec{b}|^2 - \vec{a} \cdot \vec{b}) t = 0$ <br> など
 - 手段2: 2つの式の係数を比較する
   - 三角形内の交点の位置ベクトル
-  - $\triangle{OAB}$ において、$\overrightarrow{OP} = p\overrightarrow{OA}, \overrightarrow{OQ} = q\overrightarrow{OB}$ のとき、$\overrightarrow{AQ}$ と $\overrightarrow{BP}$ の交点Rについて $\overrightarrow{OR}$ を下のように比でおく <br> $\begin{cases} AR:RQ = s:(1-s) \\ BR:RP = t:(1-t) \end{cases} \\ $ 分点の公式から $\overrightarrow{OR}$ を2種類で表す<br> $ \begin{cases} \overrightarrow{OR} = (1-s)\overrightarrow{OA}+s\overrightarrow{OQ} \\ \overrightarrow{OR} = (1-t)\overrightarrow{OB} + t\overrightarrow{OP} \end{cases} $ <br> $\begin{cases} \overrightarrow{OR} = (1-s)\overrightarrow{OA} + sq\overrightarrow{OB} \\ \overrightarrow{OR} = tp\overrightarrow{OA} + (1-t)\overrightarrow{OB} \end{cases}$ <br> これら2つの $\overrightarrow{OA}, \overrightarrow{OB}$ の係数を連立して求める <br> $\begin{cases} 1-s = tp \\ sq = 1-t \end{cases}$
+  - $\triangle{OAB}$ において、$\overrightarrow{OP} = p\overrightarrow{OA}, \overrightarrow{OQ} = q\overrightarrow{OB}$ のとき、$\overrightarrow{AQ}$ と $\overrightarrow{BP}$ の交点Rについて $\overrightarrow{OR}$ を下のように比でおく <br> $\begin{cases} AR:RQ = s:(1-s) \\\\ BR:RP = t:(1-t) \end{cases} \\\\ $ 分点の公式から $\overrightarrow{OR}$ を2種類で表す<br> $ \begin{cases} \overrightarrow{OR} = (1-s)\overrightarrow{OA}+s\overrightarrow{OQ} \\\\ \overrightarrow{OR} = (1-t)\overrightarrow{OB} + t\overrightarrow{OP} \end{cases} $ <br> $\begin{cases} \overrightarrow{OR} = (1-s)\overrightarrow{OA} + sq\overrightarrow{OB} \\\\ \overrightarrow{OR} = tp\overrightarrow{OA} + (1-t)\overrightarrow{OB} \end{cases}$ <br> これら2つの $\overrightarrow{OA}, \overrightarrow{OB}$ の係数を連立して求める <br> $\begin{cases} 1-s = tp \\\\ sq = 1-t \end{cases}$
 
 - 手段3: 係数の特徴を利用する
   - 線分OA上 → $\overrightarrow{OP} = s\overrightarrow{OA}+t\overrightarrow{OB}　(t=0)$
@@ -53,7 +53,7 @@
   - 一直線上 → $ \overrightarrow{OP} = k\overrightarrow{OA} $
   - $ AP:PB = t:1-t $ に内分する点 → $ \overrightarrow{OP} = (1-t)\overrightarrow{OA} + t\overrightarrow{OB} $
   - 分点の公式
-  - 変形して特定のベクトルにする <br> $\overrightarrow{OP} = s\overrightarrow{OA} + t\overrightarrow{OB}, 　\overrightarrow{OC} = c\overrightarrow{OA}$ のとき、 <br> $\overrightarrow{OP} = \frac{s}{c}(c\overrightarrow{OA}) + t\overrightarrow{OB} \\ \overrightarrow{OP} = \frac{s}{c}\overrightarrow{OC} + t\overrightarrow{OB} $など
+  - 変形して特定のベクトルにする <br> $\overrightarrow{OP} = s\overrightarrow{OA} + t\overrightarrow{OB}, 　\overrightarrow{OC} = c\overrightarrow{OA}$ のとき、 <br> $\overrightarrow{OP} = \frac{s}{c}(c\overrightarrow{OA}) + t\overrightarrow{OB} \\\\ \overrightarrow{OP} = \frac{s}{c}\overrightarrow{OC} + t\overrightarrow{OB} $など
 
 
 ## 量を求める
@@ -119,9 +119,9 @@
   - $s+t \leqq 1$
 
   - $ s+t = k $ とおく <br> $
-  \frac{s}{k} + \frac{t}{k} = 1 \\
-  \\
-  \vec{p} = s\vec{a} + t\vec{b} \\
+  \frac{s}{k} + \frac{t}{k} = 1 \\\\
+  \\\\
+  \vec{p} = s\vec{a} + t\vec{b} \\\\
   \vec{p} = \frac{s}{k}(k\vec{a}) + \frac{t}{k}(k\vec{b})
   $
 
