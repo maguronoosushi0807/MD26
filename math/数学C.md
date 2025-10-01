@@ -36,7 +36,7 @@
 
 ### 一次独立の利用 $( \vec{a} \not\parallel \vec{b},　\vec{a} \neq \vec{0},　 \vec{b} \neq \vec{0} )$
 - $\vec{a}, \vec{b}$ が一次独立 → $\vec{p} = s\vec{a} + t\vec{b}$ となる $s,t$ はただ一通りある。
-- $\vec{a} と \vec{b}$ を用いて表せ → まず $\vec{p} = s\vec{a} + t\vec{b}$ とおく(答えの形から考える)
+- $\vec{a},  \vec{b}$ を用いて表せ → まず $\vec{p} = s\vec{a} + t\vec{b}$ とおく(答えの形から考える)
 - 係数比較を行う → 一次独立であるか確認
 
 ### 位置ベクトルを求める
@@ -137,58 +137,53 @@
   <br>
   <br>
 
-# 空間ベクトル
+# 空間ベクトル (工事中)
 ## 基本計算
+- 基本的な計算法則は平面ベクトルと同じ
 - $ |\overrightarrow{OA}| = \sqrt{x^2+y^2+z^2}$
-- 他の計算法則は平面ベクトルと同じ
 - 成分の比較
+- ～対称 → ～成分以外の符号を反転させる
 - 2つのベクトルに垂直なベクトル → 外積 / (x,y,z)成分を文字で置く
 - 外積の計算方法:
-- ～対称 → ～成分以外の符号を反転させる
-- Ⅲ角錐の体積 → 普通の公式
+- 三角錐の体積 → 普通の公式
 - 証明 → 座標の導入
 - 点 $(x_1, y_1, z_1)$ と平面 $ax+by+cz+d=0$ の距離 → $$ h = \frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}} $$
 - 体積比 → 辺の比
 - Ⅲ角錐の体積公式 $V = \frac{1}{6}|(\vec{a}\times\vec{b})\cdot\vec{c}|$
 
 ## 位置ベクトルを求める
-###  一次独立の利用
-- 一次独立 → 任意のベクトルに対し、$\vec{p} = s\vec{a} + t\vec{b} + u\vec{c}$ ででただ一通りに表せる。
-- 点の置き方の工夫
-- 分点の公式 → 平面と同じ
+###  一次独立の利用 ( $ \vec{a}\neq\vec{0}, \vec{b}\neq\vec{0}, \vec{c}\neq\vec{0}, \vec{a}, \vec{b}, \vec{c}$ は同一平面上にない )
+- $\vec{a}, \vec{b}, \vec{c}$ が一次独立 → $\vec{p} = s\vec{a} + t\vec{b} + u\vec{c}$ となる $s,t, u$ はただ一通りある。
 - $ s\vec{a} + t\vec{b} + u\vec{c} = \vec{0}$ ならば、$ s=t=u=0$
-- 図形の性質 → なす角
-- 位置ベクトル → 平面ベクトルと同じ考え方
-- 一直線上にない $\vec{a}, \vec{b}, \vec{c}$ について、$\vec{p}$ が平面ABC上にある , Pが平面ABCと同一平面上にある → $\vec{p} = s\overrightarrow{AB} + t\overrightarrow{AC} 　(s+t=1ならばBC上)$
-  - 基点O → $\overrightarrow{OP} = s\overrightarrow{OA} + t\overrightarrow{OB} + u\overrightarrow{OC} 　(s+t+u = 1)$
-- 平面上 → ほしいベクトルの形でくくる
-- 同一平面上 → 係数の和が1
-- 係数の特徴（～のみで表せるなど）
-- 同一平面上 → $\overrightarrow{AD} = s\overrightarrow{AB} + t\overrightarrow{AC}$ で表せる
-- 2通りで表す → 係数を比較
-- 直線と面の交点 → 成分から媒介変数の値を求める
+- $\vec{a}, \vec{b}, \vec{c}$ を用いて表せ → まず $\vec{p} = s\vec{a} + t\vec{b} + u\vec{c}$ とおく(答えの形から考える)
+- 係数比較を行う → 一次独立であるか確認
+- 一直線上にない $A, B, C$ について、$\vec{p}$ が平面ABC上にある → $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ と表せる
+  - 基点をOにする → $\overrightarrow{OP} = s\overrightarrow{OA} + t\overrightarrow{OB} + u\overrightarrow{OC} 　(s+t+u = 1)$
 
-## 直線を求める
-- 直線 → 方程式は複雑なため、ベクトルで考える
+### その他の求め方
+- 線と面の交点
+- 平面ベクトルと同様の考え方ができる
+
+## 直線の扱い
+- 空間での直線 → $x,y,z$ 成分の方程式は複雑なためベクトルで考える
 - $\vec{a}$ を通り $\vec{d}$ に平行なベクトル → $\vec{p} = \vec{a} + t\vec{d}$
-  - 媒介変数tを消すと、x,y,zに関する3式がイコールで繋がった形になる
+  - 媒介変数 $t$ を消すと、x,y,zに関する3式がイコールで繋がった形になる
 - 2点 $\vec{a}, \vec{b}$ を通る
   - $\vec{p} = \vec{a} + t(\vec{b} - \vec{a})$
   - $\vec{p} = (1-t)\vec{a} + t\vec{b}$
   - $\vec{p} = s\vec{a} + t\vec{b} 　(s+t=1)$
-- 直線の式において、x,y,zは満たすべき条件を記述
 - 2つの面の交線 → 2式をxについて解き、x=(yの式)=(zの式) で表す
-- 直線の式 → 媒介変数 (→ 代入してベクトルを求める)
 - 面への垂線 → 内積 = 0
-- xy平面との交点など → z成分=0から媒介変数tの値を求める
+- xy平面との交点 → z成分=0から媒介変数 $t$ の値を求める
 
-## 面を求める
-- $\vec{a}$ をとおり $\vec{b}$ に垂直な平面 → $(\vec{p}-\vec{a})\cdot\vec{n} = 0$
-  - 内積 = 0 の式だから、x,y,zの多項式=0の形で表せる
-- 3点を通る平面の式 → $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ より、s,tを消去
-  - 平面の法線ベクトルを $\vec{n} = (a,b,c)$ とおき、$\vec{n}\cdot\overrightarrow{AB} = 0, \vec{n}\cdot\overrightarrow{AC} = 0$ より $\vec{n}$ を求め、$(\vec{p}-\vec{a})\cdot\vec{n} = 0$ から求める
+## 平面の扱い
+- $\vec{a}$ をとおり $\vec{n}$ に垂直な平面 → $(\vec{p}-\vec{a})\cdot\vec{n} = 0$
+  - 内積 = 0 の式だから、(x,y,zの多項式)=0の形で表せる
+- 3点 $A, B, C$ を通る平面の式 → 平面上の点を $P(x,y,z)$ とおくと、<br> $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ より、成分を比較して媒介変数 $s,t$ を消去
 - 法線が $\vec{n} = (a,b,c)$ の $(l,m,n)$ を通る平面の式 → $a(x-l)+b(y-m)+c(z-n) = 0$
-- 平面 $ax+by+cz+d = 0$ の法線 $\vec{n} = (a,b,c)$
+- 平面の法線ベクトルを求める
+  - 法線ベクトルを $\vec{n} = (a,b,c)$ とおき、$\vec{n}\cdot\overrightarrow{AB} = 0, \vec{n}\cdot\overrightarrow{AC} = 0$ より $\vec{n}$ を求める
+  - 平面 $ax+by+cz+d = 0$ の法線 $\vec{n} = (a,b,c)$
 - 線に垂直な面 → 線の方向ベクトル = 面の法線ベクトル
 
 ## 量を求める
@@ -198,6 +193,7 @@
 - 垂直 → 内積 = 0 $\vec{a} \neq \vec{0}, \vec{b} \neq \vec{0}$
 - $S = \frac{1}{2}\sqrt{|\vec{a}|^2|\vec{b}|^2 - (\vec{a}\cdot\vec{b})^2}$
 - 垂線 → 内積 = 0
+- 図形の性質 → なす角
 - 平面の逆側 → AB上にPがあるとき、AP+PBが最小
 - 面のなす角 → 法線のなす角
 - 面が垂直 → なす角 = 90度 → 法線の内積 = 0
@@ -213,7 +209,7 @@
 
 - 三角錐 / 四面体 の内接球の半径 → 内接円の半径と同じ考え方で、半径を $r$ とおき、4つの三角錐の体積の和から導く
 
-
+## 三角錐の扱い
 
 
 
