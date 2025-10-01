@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Viewer ( .md )</title>
+  <title>数学まとめ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
@@ -18,9 +18,9 @@
   </style>
 </head>
 <body>
-  <h1>Viewer ( .md )</h1>
+  <h1>数学まとめ</h1>
   <ul id="fileList"></ul>
-  <div id="preview">ファイルを選んでください。</div>
+  <div id="preview">上のリストからファイルを選んでください。</div>
 
   <script>
     const fileListEl = document.getElementById("fileList");
@@ -42,7 +42,7 @@
       });
 
     function loadFile(filename) {
-      fetch("math/" + filename)
+      fetch("math/" + filename + ".md")
         .then(res => res.text())
         .then(md => {
           preview.innerHTML = marked.parse(md);
