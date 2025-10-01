@@ -60,6 +60,9 @@
 ### 大きさ $|\vec{a}|$
 - 基本的な場合 → 2乗する
 - $|\vec{a} + \vec{b}|=2, |\vec{a} - \vec{b}|=3$ など条件が与えられ、 $|\vec{a}|, |\vec{b}|$ を求める場合 → $\vec{p} = \vec{a} + \vec{b}, \vec{q} = \vec{a} - \vec{b}$ などのように文字で置き、 $\vec{a}, \vec{b}$ を $\vec{p}, \vec{q}$ で表してから2乗する
+v
+- 直線AB上の点をPとしたとき $|\overrightarrow{OP}|$ が最小となる点 → 点Oからの垂線との交点
+  - 2変数関数の最大・最小 → まず1つの文字について平方完成、次にもう一つの文字も平方完成
 
 ### 平行
 - $\vec{a}(a_1, a_2),　\vec{b}(b_1, b_2)$ が平行
@@ -73,7 +76,9 @@
   - $ \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 $
 - $|\overrightarrow{AB}|, |\vec{b} - \vec{a}|$ などが与えられている → 2乗して内積を取り出す
 - 内積の最大・最小 → $ cos\theta $ 或いは $|\vec{a}|, |\vec{b}|$ の最大・最小
-- なす角 $$ cos\theta = \frac{ \vec{a} \cdot \vec{b} }{|\vec{a}| |\vec{b}|} $$
+- なす角 
+  - $$ cos\theta = \frac{ \vec{a} \cdot \vec{b} }{|\vec{a}| |\vec{b}|} $$
+  - 図形の性質を利用する
 - $\vec{a}, \vec{b}$ が垂直 → $ \vec{a} \cdot \vec{b} = 0 $
 
 ### 面積 $S$
@@ -137,19 +142,19 @@
   <br>
   <br>
 
-# 空間ベクトル (工事中)
+# 空間ベクトル
+> **ほとんど平面ベクトルと同じ**
 ## 基本計算
 - 基本的な計算法則は平面ベクトルと同じ
 - $ |\overrightarrow{OA}| = \sqrt{x^2+y^2+z^2}$
 - 成分の比較
 - ～対称 → ～成分以外の符号を反転させる
-- 2つのベクトルに垂直なベクトル → 外積 / (x,y,z)成分を文字で置く
-- 外積の計算方法:
-- 三角錐の体積 → 普通の公式
+- 2つのベクトルに垂直なベクトル → 外積
+  - $\vec{a} = (a_1, a_2, a_3), \vec{b} = (b_1, b_2, b_3)$ のときの外積: <br> $\vec{a}\times\vec{b} = (a_2b_3-a_3b_2, a_3b_1- a_1b_3, a_1b_2-a_2b_1)$
 - 証明 → 座標の導入
-- 点 $(x_1, y_1, z_1)$ と平面 $ax+by+cz+d=0$ の距離 → $$ h = \frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}} $$
 - 体積比 → 辺の比
-- Ⅲ角錐の体積公式 $V = \frac{1}{6}|(\vec{a}\times\vec{b})\cdot\vec{c}|$
+- 三角錐の体積 → 普通の公式
+- 三角錐の体積 → $V = \frac{1}{6}|(\vec{a}\times\vec{b})\cdot\vec{c}|$
 
 ## 位置ベクトルを求める
 ###  一次独立の利用 ( $ \vec{a}\neq\vec{0}, \vec{b}\neq\vec{0}, \vec{c}\neq\vec{0}, \vec{a}, \vec{b}, \vec{c}$ は同一平面上にない )
@@ -157,7 +162,7 @@
 - $ s\vec{a} + t\vec{b} + u\vec{c} = \vec{0}$ ならば、$ s=t=u=0$
 - $\vec{a}, \vec{b}, \vec{c}$ を用いて表せ → まず $\vec{p} = s\vec{a} + t\vec{b} + u\vec{c}$ とおく(答えの形から考える)
 - 係数比較を行う → 一次独立であるか確認
-- 一直線上にない $A, B, C$ について、$\vec{p}$ が平面ABC上にある → $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ と表せる
+- 一直線上にない $A, B, C$ について、$P$ が平面ABC上にある → $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ と表せる
   - 基点をOにする → $\overrightarrow{OP} = s\overrightarrow{OA} + t\overrightarrow{OB} + u\overrightarrow{OC} 　(s+t+u = 1)$
 
 ### その他の求め方
@@ -177,39 +182,35 @@
 - xy平面との交点 → z成分=0から媒介変数 $t$ の値を求める
 
 ## 平面の扱い
-- $\vec{a}$ をとおり $\vec{n}$ に垂直な平面 → $(\vec{p}-\vec{a})\cdot\vec{n} = 0$
-  - 内積 = 0 の式だから、(x,y,zの多項式)=0の形で表せる
-- 3点 $A, B, C$ を通る平面の式 → 平面上の点を $P(x,y,z)$ とおくと、<br> $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ より、成分を比較して媒介変数 $s,t$ を消去
-- 法線が $\vec{n} = (a,b,c)$ の $(l,m,n)$ を通る平面の式 → $a(x-l)+b(y-m)+c(z-n) = 0$
+- 平面とベクトル方程式
+
+  平面 | 方程式
+  -|-
+  $\vec{a}$ を通り $\vec{n}$ に垂直 | $(\vec{p}-\vec{a})\cdot\vec{n} = 0$
+  3点 $A, B, C$ を通る | $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$
+  法線 $(a,b,c)$ で $(l,m,n)$ を通る | $a(x-l)+b(y-m)+c(z-n) = 0$
 - 平面の法線ベクトルを求める
   - 法線ベクトルを $\vec{n} = (a,b,c)$ とおき、$\vec{n}\cdot\overrightarrow{AB} = 0, \vec{n}\cdot\overrightarrow{AC} = 0$ より $\vec{n}$ を求める
   - 平面 $ax+by+cz+d = 0$ の法線 $\vec{n} = (a,b,c)$
-- 線に垂直な面 → 線の方向ベクトル = 面の法線ベクトル
-
-## 量を求める
-- AB上の点をPとすると $|\overrightarrow{OP}|$ が最小となる → 点Oからの垂線との交点
-- 大きさ → 2乗
-  - 2変数関数の最大・最小 → まず1つの文字について平方完成、次にもう一つの文字も平方完成
-- 垂直 → 内積 = 0 $\vec{a} \neq \vec{0}, \vec{b} \neq \vec{0}$
-- $S = \frac{1}{2}\sqrt{|\vec{a}|^2|\vec{b}|^2 - (\vec{a}\cdot\vec{b})^2}$
-- 垂線 → 内積 = 0
-- 図形の性質 → なす角
-- 平面の逆側 → AB上にPがあるとき、AP+PBが最小
+- 点 $(x_1, y_1, z_1)$ と平面 $ax+by+cz+d=0$ の距離 $$ h = \frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}} $$
 - 面のなす角 → 法線のなす角
 - 面が垂直 → なす角 = 90度 → 法線の内積 = 0
-- 直線と面の角度 → 方向ベクトルと法線ベクトルのなす角
+- 直線 $l$ に垂直な面 → $l$ の方向ベクトル = 面の法線ベクトル $\vec{n}$
+
+## 量を求める
+- 平面の逆側 → AB上にPがあるとき、AP+PBが最小
+- 直線と平面のなす角 → 方向ベクトルと法線ベクトルのなす角
 
 ## 球の扱い
 - 球面の公式
-  条件 | 式
+  球の条件 | 方程式
   -|-
   $\vec{c}$ を中心とし、半径 $r$ の円 |  $\lvert \vec{p}-\vec{c} \rvert = r$
   $\vec{a}, \vec{b}$ を直径の両端とする球面 | $(\vec{p}-\vec{a})(\vec{p}-\vec{b}) = 0$
   $(a,b,c)$ を中心とし、半径 $r$ の円 | $(x-a)^2+(y-b)^2+(z-c)^2 = r^2$
 
-- 三角錐 / 四面体 の内接球の半径 → 内接円の半径と同じ考え方で、半径を $r$ とおき、4つの三角錐の体積の和から導く
+- 三角錐 / 四面体 の内接球の半径 → 内接円の半径と同じ考え方で、半径を $r$ とおき、もとの三角錐を分割した、4つの三角錐の体積の和から導く
 
-## 三角錐の扱い
 
 
 
