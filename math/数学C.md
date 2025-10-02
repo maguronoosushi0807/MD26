@@ -24,6 +24,7 @@
 - ベクトルに別のベクトルの多項式を代入
 - $ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} $
 - $ \overrightarrow{OH} = \overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC}$ のとき、 $ \overrightarrow{OH} - \overrightarrow{OA} = \overrightarrow{OB} + \overrightarrow{OC}$ より、 $ \overrightarrow{AH} = \overrightarrow{OB} + \overrightarrow{OC} $
+- 小問ごとに必要な部分を抜き出した図を書くとわかりやすい
 
 ## 位置ベクトルを求める
 ### 位置ベクトルの考え方
@@ -31,6 +32,7 @@
 - 基点の置き方 → 点 $A, B, C, ...$ を表すのに必要な文字が減る点を基点に選ぶ
   - 基本的な場合 → 原点, 点A
   - $ \overrightarrow{AP}+\overrightarrow{BP}, 　\overrightarrow{AP}\cdot\overrightarrow{BP} $ など → $AB$ の中点 $M$
+  - $k\overrightarrow{BC}$ など、変数を含む場合 → B, C のどちらかを基点に選ぶと計算しやすい
 - ～の位置 → (左辺)と(右辺)を同じ基点の位置ベクトルで表す
 - ～の軌跡 → 基本は位置と同じ考え方、$t, k$ などの変数は多項式から分離する
 
@@ -50,6 +52,7 @@
 - 手段3: 係数の特徴を利用する
   - 線分OA上 → $\overrightarrow{OP} = s\overrightarrow{OA}+t\overrightarrow{OB}　(t=0)$
   - 線分AB上 → $\overrightarrow{OP} = s\overrightarrow{OA}+t\overrightarrow{OB}　(s+t=1)$
+  - 線分AB上 → $\overrightarrow{OP} = s\overrightarrow{OA}+(1-s)\overrightarrow{OB}$ (Bを通りABに平行な直線と見ることもできる)
   - 一直線上 → $ \overrightarrow{OP} = k\overrightarrow{OA} $
   - $ AP:PB = t:1-t $ に内分する点 → $ \overrightarrow{OP} = (1-t)\overrightarrow{OA} + t\overrightarrow{OB} $
   - 分点の公式
@@ -63,6 +66,7 @@
 v
 - 直線AB上の点をPとしたとき $|\overrightarrow{OP}|$ が最小となる点 → 点Oからの垂線との交点
   - 2変数関数の最大・最小 → まず1つの文字について平方完成、次にもう一つの文字も平方完成
+- 辺の比が与えられた場合 → イコールの形に直し、2乗する
 
 ### 平行
 - $\vec{a}(a_1, a_2),　\vec{b}(b_1, b_2)$ が平行
@@ -79,6 +83,8 @@ v
 - なす角 
   - $$ cos\theta = \frac{ \vec{a} \cdot \vec{b} }{|\vec{a}| |\vec{b}|} $$
   - 図形の性質を利用する
+  - 円周角の定理を利用する
+  - どうしようもない場合 → 90°で決め打ち
 - $\vec{a}, \vec{b}$ が垂直 → $ \vec{a} \cdot \vec{b} = 0 $
 
 ### 面積 $S$
@@ -86,6 +92,7 @@ v
   - $$ S = \frac{1}{2}|a||b|sin\theta $$
   - $$ S = \frac{1}{2} \sqrt{ |\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2} $$
   - $$ S = \frac{1}{2} | a_1b_2 - a_2b_1| $$
+- 単純に求められない場合 → 面積比の問題として捉え直す
 - 面積比 → 一番小さい部分の辺の比から面積を文字で置き、全体を求めていく (例: $AP:PB = 3:4$ のとき、$\triangle{OAP} : \triangle{OBP} = 3S:4S$ )
 - 高さが変わらない → 面積一定
 
@@ -96,6 +103,15 @@ v
 - 内心 → 辺の比から図形の性質
 - 外心が基点の位置ベクトル → $|\vec{a}| = |\vec{b}| = |\vec{c}| = r$
 - 三角形の形状 → まずは辺の長さ、次に角度を調べる
+- 外心を求めよなど、計算がめんどくさくなりそうな場合 → まずは辺の比から三角形の形状を調べる。うまくいくと計算が楽になる
+- 正三角形において、重心と垂心、外心は一致する
+
+### 平行四辺形でのベクトルの扱い
+- 向かい合う辺のベクトルは相等なベクトルになる
+  - 平行四辺形ABCDにおいて、$\overrightarrow{AB} = \overrightarrow{DC},　\overrightarrow{AD} = \overrightarrow{BC}$
+
+### 台形でのベクトルの扱い
+- 台形ABCDにおいて、$2AB = CD$ のとき、ABの中点をMとすると、四角形ABMD は平行四辺形になる
 
 ## ベクトル ↔ 図形の相互変換
 - 直線とベクトル方程式
@@ -139,6 +155,9 @@ v
 
 3. 文字固定(ある文字を定数として見る)して、1つ1つの文字を順番に見ていく
 
+- $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ のとき、点Pが三角形ABCの内部にある → $s>0,　t>0,　s+t<1$
+- 領域に関する条件が複雑な場合、一つ一つの条件について当てはまる領域を図示し、最後にそれらの共通部分を求める
+
   <br>
   <br>
 
@@ -155,6 +174,8 @@ v
 - 体積比 → 辺の比
 - 三角錐の体積 → 普通の公式
 - 三角錐の体積 → $V = \frac{1}{6}|(\vec{a}\times\vec{b})\cdot\vec{c}|$
+- 誘導に乗れるように適宜 $\overrightarrow{OP}$ を $\overrightarrow{PO}$ としたりする
+- 平面について考える場合、その平面を先に書いてから点を乗せると図が書きやすくなる
 
 ## 位置ベクトルを求める
 ###  一次独立の利用 ( $ \vec{a}\neq\vec{0}, \vec{b}\neq\vec{0}, \vec{c}\neq\vec{0}, \vec{a}, \vec{b}, \vec{c}$ は同一平面上にない )
@@ -164,6 +185,8 @@ v
 - 係数比較を行う → 一次独立であるか確認
 - 一直線上にない $A, B, C$ について、$P$ が平面ABC上にある → $\overrightarrow{AP} = s\overrightarrow{AB} + t\overrightarrow{AC}$ と表せる
   - 基点をOにする → $\overrightarrow{OP} = s\overrightarrow{OA} + t\overrightarrow{OB} + u\overrightarrow{OC} 　(s+t+u = 1)$
+  - 平面ベクトルにおける～直線上の場合と同様に、この形に変形することで計算量を抑えることができる。
+- 座標などの具体値が与えられた問題 → すべてを成分で計算することで計算量を抑えることができる
 
 ### その他の求め方
 - 線と面の交点
@@ -173,6 +196,7 @@ v
 - 空間での直線 → $x,y,z$ 成分の方程式は複雑なためベクトルで考える
 - $\vec{a}$ を通り $\vec{d}$ に平行なベクトル → $\vec{p} = \vec{a} + t\vec{d}$
   - 媒介変数 $t$ を消すと、x,y,zに関する3式がイコールで繋がった形になる
+  - APを通る直線などをこの形で置く場合、$\vec{A}$ には点A,P のどちらを入れも構わない。
 - 2点 $\vec{a}, \vec{b}$ を通る
   - $\vec{p} = \vec{a} + t(\vec{b} - \vec{a})$
   - $\vec{p} = (1-t)\vec{a} + t\vec{b}$
@@ -198,6 +222,7 @@ v
 - 直線 $l$ に垂直な面 → $l$ の方向ベクトル = 面の法線ベクトル $\vec{n}$
 
 ## 量を求める
+- 具体値の大きさの計算 → 成分でやると楽
 - 平面の逆側 → AB上にPがあるとき、AP+PBが最小
 - 直線と平面のなす角 → 方向ベクトルと法線ベクトルのなす角
 
