@@ -63,7 +63,7 @@
 ### 大きさ $|\vec{a}|$
 - 基本的な場合 → 2乗する
 - $|\vec{a} + \vec{b}|=2, |\vec{a} - \vec{b}|=3$ など条件が与えられ、 $|\vec{a}|, |\vec{b}|$ を求める場合 → $\vec{p} = \vec{a} + \vec{b}, \vec{q} = \vec{a} - \vec{b}$ などのように文字で置き、 $\vec{a}, \vec{b}$ を $\vec{p}, \vec{q}$ で表してから2乗する
-v
+- 成分で計算する
 - 直線AB上の点をPとしたとき $|\overrightarrow{OP}|$ が最小となる点 → 点Oからの垂線との交点
   - 2変数関数の最大・最小 → まず1つの文字について平方完成、次にもう一つの文字も平方完成
 - 辺の比が与えられた場合 → イコールの形に直し、2乗する
@@ -76,7 +76,8 @@ v
 
 ### 内積 $\vec{a} \cdot \vec{b}$
 - 内積
-  - $ \vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| cos\theta $
+  - $ \vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}| cos\theta $
+  - $ \vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}| \frac{|\overrightarrow{OA}|^2 + |\overrightarrow{OB}|^2 - | \overrightarrow{AB}|^2}{2|\overrightarrow{OA}||\overrightarrow{OB}|}$ (余弦定理の利用, ABを用いる場合に有効)
   - $ \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 $
 - $|\overrightarrow{AB}|, |\vec{b} - \vec{a}|$ などが与えられている → 2乗して内積を取り出す
 - 内積の最大・最小 → $ cos\theta $ 或いは $|\vec{a}|, |\vec{b}|$ の最大・最小
