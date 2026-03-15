@@ -1,6 +1,6 @@
 // ===== 設定 =====
 
-const TOTAL_MIN = 8;
+const TOTAL_MIN = 7.5;
 const TOTAL_SEC = 0;
 
 const TOTAL_TIME = TOTAL_MIN * 60 + TOTAL_SEC;
@@ -11,7 +11,7 @@ const TOTAL_TEXT =
     + TOTAL_SEC.toString().padStart(2,"0");
 
 const MD_FILE = "script.md";
-
+const PROMPT_TEXT = "楽しいでしょ\n淡々と読んでたらかっこよすぎる意味わからんくらいすごい実績だから誇っていい\nツバ飲み込むときはマイク話せ";
 
 // =================
 
@@ -21,11 +21,13 @@ let totalUnits=1;
 let playing=false;
 let startTime=0;
 let offset=0;
+let promptVisible = true;
 
 const playBtn=document.getElementById("play");
 const progress=document.getElementById("progress");
 const timeText=document.getElementById("time");
 const content=document.getElementById("content");
+const prompt = document.getElementById("prompt");
 
 progress.max = TOTAL_TIME;
 
@@ -113,7 +115,8 @@ function buildTimeline(){
 
                     timeline.push({
                         chars:[c],
-                        weight:weightOf(t)
+                        weight:weightOf(t),
+                        id:timeline.length
                     });
 
                 });
@@ -182,6 +185,7 @@ function loop(){
         t;
 
 
+
     let ratio=offset/TOTAL_TIME;
 
     let target=ratio*totalUnits;
@@ -225,5 +229,47 @@ function loop(){
 }
 
 
+content.addEventListener("click", e => {
+
+    let el = e.target;
+
+    if(!el.classList.contains("char")) return;
+
+    let index = 0;
+    let acc = 0;
+
+    for(let i=0;i<timeline.length;i++){
+
+        let unit = timeline[i];
+
+        if(unit.chars.includes(el)){
+            index = acc;
+            break;
+        }
+
+        acc += unit.weight;
+    }
+
+    let ratio = index / totalUnits;
+
+    offset = ratio * TOTAL_TIME;
+
+    startTime = performance.now() - offset * 1000;
+
+});
+
+timeText.addEventListener("click", () => {
+
+    promptVisible = !promptVisible;
+
+    if(promptVisible){
+        prompt.style.display = "flex";
+    }else{
+        prompt.style.display = "none";
+    }
+
+});
 
 loadMarkdown();
+
+prompt.textContent = PROMPT_TEXT;
