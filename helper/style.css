@@ -1,0 +1,146 @@
+body{
+    margin:0;
+    background:#0a0a0a;
+    color:white;
+    font-family:sans-serif;
+}
+
+#topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:60px;
+    background:#222;
+
+    display:grid;
+    grid-template-columns:80px 1fr 80px;
+
+    align-items:center;
+    padding:0 10px;
+}
+
+#left{
+    display:flex;
+    justify-content:center;
+}
+
+#right{
+    display:flex;
+    justify-content:center;
+
+    font-family:monospace;
+    font-size:18px;
+
+    letter-spacing:2px;   /* ←字間 */
+}
+
+#center{
+    display:flex;
+    justify-content:center;
+}
+
+#progress{
+    width:100%;
+
+    appearance:none;
+    height:4px;
+
+    background:transparent;
+}
+
+
+/* track透明にする */
+
+#progress::-webkit-slider-runnable-track{
+    height:4px;
+    background:transparent;
+}
+
+#progress::-moz-range-track{
+    height:4px;
+    background:transparent;
+}
+
+
+/* thumb */
+
+#progress::-webkit-slider-thumb{
+
+    appearance:none;
+
+    width:12px;
+    height:12px;
+
+    background:#ff0000;
+    border-radius:50%;
+
+    margin-top:-4px;
+}
+
+#progress::-moz-range-thumb{
+
+    width:12px;
+    height:12px;
+
+    background:#ff0000;
+    border:none;
+    border-radius:50%;
+}
+
+
+
+/* 再生ボタン */
+
+#play{
+    width:40px;
+    height:40px;
+    background:#222;
+    border:none;
+    position:relative;
+}
+
+#play::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:14px;
+    top:10px;
+
+    border-left:14px solid white;
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+}
+
+#play.stop::before{
+
+    border:none;
+
+    width:10px;
+    height:16px;
+
+    background:white;
+
+    box-shadow:8px 0 0 white;
+}
+
+
+/* content */
+
+#content{
+    margin-top:70px;
+    padding:15px;
+    font-size:22px;
+    line-height:1.7;
+}
+
+.char{
+    color:#eaeaea;
+    transition:color 0.25s linear;
+}
+
+.read{
+    color:#9c0909;
+}

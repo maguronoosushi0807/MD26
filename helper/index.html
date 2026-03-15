@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Speech Support</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="topbar">
+
+<div id="left">
+<button id="play"></button>
+</div>
+
+<div id="center">
+<input id="progress" type="range" min="0" max="600" value="0">
+</div>
+
+<div id="right">
+<div id="time">[00:00/10:00]</div>
+</div>
+
+</div>
+
+<div id="content"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
