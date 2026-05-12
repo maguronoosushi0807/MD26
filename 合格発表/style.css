@@ -1,0 +1,44 @@
+@charset "shift-jis";
+
+body {
+        font: 1em sans-serif;
+        margin: 1em;
+}
+
+h3 {
+        margin-bottom: 0.5em;
+}
+
+p {
+        margin-bottom: 1em;
+        line-height: 1.6em;
+}
+
+ul {
+        line-height: 1.6em;
+        margin-right: 2em;
+}
+
+em {
+        font-weight: bold;
+}
+
+table {
+        height: 29em;
+        margin-bottom: 1em;
+        border-collapse: separate;
+}
+
+td {
+        padding: .5em;
+        line-height: 1.4em;
+        width: 6em;
+        text-align: left;
+/*        width: 5em;*/
+/*        text-align: center;*/
+        vertical-align: top;
+}
+
+hr {
+        margin-top: 2em;
+}
